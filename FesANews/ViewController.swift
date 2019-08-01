@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
-
+  
+  @IBOutlet weak var animationView: AnimationView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    startAnimation()
   }
-
-
+  
+  private func startAnimation() {
+    animationView.animation = Animation.named("loader")
+    animationView.loopMode = .playOnce
+    animationView.contentMode = .scaleToFill
+    animationView.play { (finished) in
+      self.goToMainNavigationController()
+    }
+  }
+  
+  private func goToMainNavigationController() {
+    let storyboard = UIStoryboard( name: "Main", bundle: nil )
+    let vc = storyboard.instantiateViewController(withIdentifier: "TimeLine")
+    present(vc, animated: true, completion: nil)
+  }
 }
 
