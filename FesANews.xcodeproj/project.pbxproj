@@ -17,8 +17,16 @@
 		FE175B6C22F2903F00E53245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE175B6A22F2903F00E53245 /* LaunchScreen.storyboard */; };
 		FE175B7722F2903F00E53245 /* FesANewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B7622F2903F00E53245 /* FesANewsTests.swift */; };
 		FE175B8222F2903F00E53245 /* FesANewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B8122F2903F00E53245 /* FesANewsUITests.swift */; };
+		FE4231E422F35E5A00F46F80 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4231E322F35E5A00F46F80 /* NewsService.swift */; };
+		FE4231E722F3613800F46F80 /* TimelineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4231E622F3613800F46F80 /* TimelineProtocol.swift */; };
+		FE599F6922F5271C00A1C9E1 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE599F6822F5271C00A1C9E1 /* FirebaseService.swift */; };
+		FE599F6C22F52A3500A1C9E1 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE599F6B22F52A3500A1C9E1 /* NewsModel.swift */; };
+		FE6F3BF922F6A17300E17E36 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6F3BF822F6A17300E17E36 /* UIColorExtension.swift */; };
 		FEA5312622F29B1A003FC49F /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = FEA5312522F29B1A003FC49F /* loader.json */; };
 		FEA5312D22F29DF7003FC49F /* TimeLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5312C22F29DF7003FC49F /* TimeLineController.swift */; };
+		FEA7C9E522F34CBB00132A23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA7C9E422F34CBB00132A23 /* GoogleService-Info.plist */; };
+		FEBC2D7822F686DA00C3716A /* TimeLineCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */; };
+		FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC2D7922F68F6A00C3716A /* DateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +69,19 @@
 		FE175B7D22F2903F00E53245 /* FesANewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FesANewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE175B8122F2903F00E53245 /* FesANewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FesANewsUITests.swift; sourceTree = "<group>"; };
 		FE175B8322F2903F00E53245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4231E322F35E5A00F46F80 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		FE4231E622F3613800F46F80 /* TimelineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProtocol.swift; sourceTree = "<group>"; };
+		FE599F6822F5271C00A1C9E1 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		FE599F6B22F52A3500A1C9E1 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		FE6F3BF822F6A17300E17E36 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FEA5312522F29B1A003FC49F /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		FEA5312822F29C20003FC49F /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
 		FEA5312922F29C20003FC49F /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		FEA5312A22F29C20003FC49F /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
 		FEA5312C22F29DF7003FC49F /* TimeLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineController.swift; sourceTree = "<group>"; };
+		FEA7C9E422F34CBB00132A23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCustomCell.swift; sourceTree = "<group>"; };
+		FEBC2D7922F68F6A00C3716A /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +160,10 @@
 		FE175B6022F2903F00E53245 /* FesANews */ = {
 			isa = PBXGroup;
 			children = (
+				FE6F3BF722F6A15E00E17E36 /* Extensions */,
+				FE599F6A22F52A2700A1C9E1 /* Models */,
+				FE4231E522F35E7000F46F80 /* Protocols */,
+				FE4231E222F35E3500F46F80 /* Services */,
 				FEA5312B22F29DCD003FC49F /* Controllers */,
 				FEA5312722F29BB7003FC49F /* Fonts */,
 				FEA5312022F29398003FC49F /* Lottie */,
@@ -152,6 +172,7 @@
 				FE175B6522F2903F00E53245 /* Main.storyboard */,
 				FE175B6822F2903F00E53245 /* Assets.xcassets */,
 				FE175B6A22F2903F00E53245 /* LaunchScreen.storyboard */,
+				FEA7C9E422F34CBB00132A23 /* GoogleService-Info.plist */,
 				FE175B6D22F2903F00E53245 /* Info.plist */,
 			);
 			path = FesANews;
@@ -173,6 +194,40 @@
 				FE175B8322F2903F00E53245 /* Info.plist */,
 			);
 			path = FesANewsUITests;
+			sourceTree = "<group>";
+		};
+		FE4231E222F35E3500F46F80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE4231E322F35E5A00F46F80 /* NewsService.swift */,
+				FE599F6822F5271C00A1C9E1 /* FirebaseService.swift */,
+				FEBC2D7922F68F6A00C3716A /* DateService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FE4231E522F35E7000F46F80 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FE4231E622F3613800F46F80 /* TimelineProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FE599F6A22F52A2700A1C9E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE599F6B22F52A3500A1C9E1 /* NewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE6F3BF722F6A15E00E17E36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE6F3BF822F6A17300E17E36 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FEA5312022F29398003FC49F /* Lottie */ = {
@@ -197,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				FEA5312C22F29DF7003FC49F /* TimeLineController.swift */,
+				FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +367,7 @@
 			files = (
 				FE175B6C22F2903F00E53245 /* LaunchScreen.storyboard in Resources */,
 				FE175B6922F2903F00E53245 /* Assets.xcassets in Resources */,
+				FEA7C9E522F34CBB00132A23 /* GoogleService-Info.plist in Resources */,
 				FEA5312622F29B1A003FC49F /* loader.json in Resources */,
 				FE175B6722F2903F00E53245 /* Main.storyboard in Resources */,
 			);
@@ -423,8 +480,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */,
+				FE599F6C22F52A3500A1C9E1 /* NewsModel.swift in Sources */,
+				FE4231E722F3613800F46F80 /* TimelineProtocol.swift in Sources */,
 				FE175B6422F2903F00E53245 /* ViewController.swift in Sources */,
 				FEA5312D22F29DF7003FC49F /* TimeLineController.swift in Sources */,
+				FE4231E422F35E5A00F46F80 /* NewsService.swift in Sources */,
+				FEBC2D7822F686DA00C3716A /* TimeLineCustomCell.swift in Sources */,
+				FE6F3BF922F6A17300E17E36 /* UIColorExtension.swift in Sources */,
+				FE599F6922F5271C00A1C9E1 /* FirebaseService.swift in Sources */,
 				FE175B6222F2903F00E53245 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,7 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RC8FK24L82;
+				DEVELOPMENT_TEAM = R4KAFXQFXK;
 				INFOPLIST_FILE = FesANews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -621,7 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RC8FK24L82;
+				DEVELOPMENT_TEAM = R4KAFXQFXK;
 				INFOPLIST_FILE = FesANews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

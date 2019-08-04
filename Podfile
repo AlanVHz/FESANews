@@ -7,7 +7,10 @@ target 'FesANews' do
 
   # Pods for FesANews
 	pod 'lottie-ios'
-
+	pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'CodableFirebase'
+  
   target 'FesANewsTests' do
     inherit! :search_paths
     # Pods for testing
