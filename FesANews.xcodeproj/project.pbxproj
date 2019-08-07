@@ -10,6 +10,14 @@
 		2B43F4DD3ADDEE88471402FF /* Pods_FesANewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301C3BC3A3299B7917557153 /* Pods_FesANewsTests.framework */; };
 		880DDE9ED34CF3A948892922 /* Pods_FesANews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BD62FC380188829FE7BA99 /* Pods_FesANews.framework */; };
 		CA327C3E2EF72064E548072A /* Pods_FesANewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA3E320D4B00613892645B7 /* Pods_FesANewsUITests.framework */; };
+		FE015C2122F91A700038674F /* loading-toggle.json in Resources */ = {isa = PBXBuildFile; fileRef = FE015C2022F91A700038674F /* loading-toggle.json */; };
+		FE015C2322F92B080038674F /* InstitutionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2222F92B080038674F /* InstitutionController.swift */; };
+		FE015C2422F933710038674F /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEA5312822F29C20003FC49F /* Ubuntu-Bold.ttf */; };
+		FE015C2522F933740038674F /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEA5312A22F29C20003FC49F /* Ubuntu-Medium.ttf */; };
+		FE015C2622F933760038674F /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEA5312922F29C20003FC49F /* Ubuntu-Regular.ttf */; };
+		FE015C2822F935DF0038674F /* InstitutionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2722F935DF0038674F /* InstitutionsModel.swift */; };
+		FE015C2A22F938360038674F /* InstitutionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2922F938360038674F /* InstitutionsProtocol.swift */; };
+		FE015C2C22F938580038674F /* InstitutionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2B22F938580038674F /* InstitutionsService.swift */; };
 		FE175B6222F2903F00E53245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B6122F2903F00E53245 /* AppDelegate.swift */; };
 		FE175B6422F2903F00E53245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B6322F2903F00E53245 /* ViewController.swift */; };
 		FE175B6722F2903F00E53245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE175B6522F2903F00E53245 /* Main.storyboard */; };
@@ -56,6 +64,11 @@
 		8DA3E320D4B00613892645B7 /* Pods_FesANewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FesANewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29473A125DEB13EAF8DEE40 /* Pods-FesANews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FesANews.debug.xcconfig"; path = "Target Support Files/Pods-FesANews/Pods-FesANews.debug.xcconfig"; sourceTree = "<group>"; };
 		B4BD62FC380188829FE7BA99 /* Pods_FesANews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FesANews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE015C2022F91A700038674F /* loading-toggle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-toggle.json"; sourceTree = "<group>"; };
+		FE015C2222F92B080038674F /* InstitutionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionController.swift; sourceTree = "<group>"; };
+		FE015C2722F935DF0038674F /* InstitutionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsModel.swift; sourceTree = "<group>"; };
+		FE015C2922F938360038674F /* InstitutionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsProtocol.swift; sourceTree = "<group>"; };
+		FE015C2B22F938580038674F /* InstitutionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsService.swift; sourceTree = "<group>"; };
 		FE175B5E22F2903F00E53245 /* FesANews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FesANews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE175B6122F2903F00E53245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE175B6322F2903F00E53245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4231E322F35E5A00F46F80 /* NewsService.swift */,
+				FE015C2B22F938580038674F /* InstitutionsService.swift */,
 				FE599F6822F5271C00A1C9E1 /* FirebaseService.swift */,
 				FEBC2D7922F68F6A00C3716A /* DateService.swift */,
 			);
@@ -210,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4231E622F3613800F46F80 /* TimelineProtocol.swift */,
+				FE015C2922F938360038674F /* InstitutionsProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -218,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				FE599F6B22F52A3500A1C9E1 /* NewsModel.swift */,
+				FE015C2722F935DF0038674F /* InstitutionsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +249,7 @@
 		FEA5312022F29398003FC49F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				FE015C2022F91A700038674F /* loading-toggle.json */,
 				FEA5312522F29B1A003FC49F /* loader.json */,
 			);
 			path = Lottie;
@@ -253,6 +270,7 @@
 			children = (
 				FEA5312C22F29DF7003FC49F /* TimeLineController.swift */,
 				FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */,
+				FE015C2222F92B080038674F /* InstitutionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,8 +385,12 @@
 			files = (
 				FE175B6C22F2903F00E53245 /* LaunchScreen.storyboard in Resources */,
 				FE175B6922F2903F00E53245 /* Assets.xcassets in Resources */,
+				FE015C2122F91A700038674F /* loading-toggle.json in Resources */,
 				FEA7C9E522F34CBB00132A23 /* GoogleService-Info.plist in Resources */,
+				FE015C2422F933710038674F /* Ubuntu-Bold.ttf in Resources */,
 				FEA5312622F29B1A003FC49F /* loader.json in Resources */,
+				FE015C2622F933760038674F /* Ubuntu-Regular.ttf in Resources */,
+				FE015C2522F933740038674F /* Ubuntu-Medium.ttf in Resources */,
 				FE175B6722F2903F00E53245 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,15 +503,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */,
+				FE015C2A22F938360038674F /* InstitutionsProtocol.swift in Sources */,
 				FE599F6C22F52A3500A1C9E1 /* NewsModel.swift in Sources */,
 				FE4231E722F3613800F46F80 /* TimelineProtocol.swift in Sources */,
 				FE175B6422F2903F00E53245 /* ViewController.swift in Sources */,
 				FEA5312D22F29DF7003FC49F /* TimeLineController.swift in Sources */,
 				FE4231E422F35E5A00F46F80 /* NewsService.swift in Sources */,
 				FEBC2D7822F686DA00C3716A /* TimeLineCustomCell.swift in Sources */,
+				FE015C2C22F938580038674F /* InstitutionsService.swift in Sources */,
 				FE6F3BF922F6A17300E17E36 /* UIColorExtension.swift in Sources */,
+				FE015C2822F935DF0038674F /* InstitutionsModel.swift in Sources */,
 				FE599F6922F5271C00A1C9E1 /* FirebaseService.swift in Sources */,
 				FE175B6222F2903F00E53245 /* AppDelegate.swift in Sources */,
+				FE015C2322F92B080038674F /* InstitutionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

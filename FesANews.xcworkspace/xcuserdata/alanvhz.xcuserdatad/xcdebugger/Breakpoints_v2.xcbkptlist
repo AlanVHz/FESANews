@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FesANews/Controllers/InstitutionController.swift"
+            timestampString = "586760657.545037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setInstitutionsSnapshotListener()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;FesANews.Institution&gt;) -&gt; () in FesANews.InstitutionController.(setInstitutionsSnapshotListener in _B394D4E02F733B9F852FE0F884B0AB0E)() -&gt; ()"
+                  moduleName = "FesANews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alanvhz/Documents/FesANews/FesANews/Controllers/InstitutionController.swift"
+                  timestampString = "586760658.329419"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; () in FesANews.InstitutionController.(setInstitutionsSnapshotListener in _B394D4E02F733B9F852FE0F884B0AB0E)() -&gt; ()"
+                  moduleName = "FesANews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alanvhz/Documents/FesANews/FesANews/Controllers/InstitutionController.swift"
+                  timestampString = "586760658.331362"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

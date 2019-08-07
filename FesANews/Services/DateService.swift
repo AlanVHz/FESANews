@@ -11,11 +11,18 @@ import Foundation
 class DateService {
   
   let dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
+  let userDateFormat = "dd-MM-yyyy"
   
-  func dateFormatterFromFirebase( date:String ) -> Date {
+  func dateFormatterFromFirebase( date:String ) -> String {
+    
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = dateFormat
-    return dateFormatter.date(from: date) ?? Date()
+    
+    let userDateFormatter = DateFormatter()
+    userDateFormatter.dateFormat = userDateFormat
+    
+    let auxDate = dateFormatter.date(from: date)!
+    return userDateFormatter.string(from: auxDate)
   }
   
 }

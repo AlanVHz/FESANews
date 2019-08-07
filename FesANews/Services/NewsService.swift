@@ -10,6 +10,11 @@ import Foundation
 import CodableFirebase
 
 class NewsService: TimelineProtocol {
+  var news: newsList?
+  
+  func getNewsListFromRam() -> [NewModel] {
+    return news ?? []
+  }
 
   func getNews(success: @escaping ( newsList ) -> Void, failure: @escaping (String) -> Void) {
     Fire.shared.database.collection("news").addSnapshotListener { (query, error) in
@@ -22,13 +27,13 @@ class NewsService: TimelineProtocol {
           
           else {
             for data in news {
-              
-              let myNew = try! FirebaseDecoder().decode( NewModel.self, from: data.data() )
+              let myNew = try! FirebaseDecoder().decode( NewModel.self,
+                                                         from: data.data() )
               newsListObj.append( myNew )
-              
             }
           }
         }
+        self.news = newsListObj
         success( newsListObj )
       }
     }

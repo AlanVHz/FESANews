@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLj-pv-Hjj" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="313.5" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="224" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -28,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="WLj-pv-Hjj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="0Rk-wM-bnC"/>
                             <constraint firstItem="WLj-pv-Hjj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="X00-U9-Nkq"/>
-                            <constraint firstItem="WLj-pv-Hjj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.2" id="rlp-nh-zfk"/>
+                            <constraint firstItem="WLj-pv-Hjj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rlp-nh-zfk"/>
                             <constraint firstItem="WLj-pv-Hjj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x1x-ec-nt1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="138"/>
+            <point key="canvasLocation" x="556.52173913043487" y="137.94642857142856"/>
         </scene>
         <!--Noticias-->
         <scene sceneID="HJI-q4-yCW">
@@ -67,35 +72,101 @@
                                     <outlet property="delegate" destination="Xa7-qr-k4H" id="G4o-Zt-cYb"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpF-3u-Aji" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="83" y="336" width="248" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Jk9-Jz-ZdF" secondAttribute="bottom" id="HjZ-df-FK1"/>
+                            <constraint firstItem="JpF-3u-Aji" firstAttribute="centerX" secondItem="HhF-qO-myp" secondAttribute="centerX" id="PJ2-VL-11v"/>
+                            <constraint firstItem="JpF-3u-Aji" firstAttribute="height" secondItem="HhF-qO-myp" secondAttribute="height" multiplier="0.25" id="VPa-dY-WBH"/>
+                            <constraint firstItem="JpF-3u-Aji" firstAttribute="width" secondItem="HhF-qO-myp" secondAttribute="width" multiplier="0.6" id="Yvc-Ef-NXJ"/>
                             <constraint firstItem="Jk9-Jz-ZdF" firstAttribute="trailing" secondItem="2fe-GR-7q2" secondAttribute="trailing" id="aey-vr-LdQ"/>
                             <constraint firstItem="Jk9-Jz-ZdF" firstAttribute="leading" secondItem="2fe-GR-7q2" secondAttribute="leading" id="l1C-CG-bEq"/>
                             <constraint firstItem="Jk9-Jz-ZdF" firstAttribute="top" secondItem="2fe-GR-7q2" secondAttribute="top" id="q8I-GA-0ri"/>
+                            <constraint firstItem="JpF-3u-Aji" firstAttribute="centerY" secondItem="HhF-qO-myp" secondAttribute="centerY" id="ywd-F8-udv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2fe-GR-7q2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Noticias" id="ocz-W8-o7J"/>
                     <connections>
+                        <outlet property="loadingAnimation" destination="JpF-3u-Aji" id="27g-yz-Eaw"/>
                         <outlet property="tableView" destination="Jk9-Jz-ZdF" id="LbW-cO-g06"/>
+                        <segue destination="j9k-6i-if9" kind="show" identifier="institutionSegue" id="xDU-td-hrs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tb-25-eUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2415.9420289855075" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2477" y="138"/>
+        </scene>
+        <!--Institution Controller-->
+        <scene sceneID="pYH-VX-Jow">
+            <objects>
+                <viewController id="j9k-6i-if9" customClass="InstitutionController" customModule="FesANews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcf-4D-MXa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsE-Ue-028">
+                                <rect key="frame" x="0.0" y="140" width="414" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unam_background" translatesAutoresizingMaskIntoConstraints="NO" id="5nK-gX-Dpq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-zh-bhY">
+                                        <rect key="frame" x="20" y="130" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="77U-GJ-aaR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="M1a-UP-mlx"/>
+                                    <constraint firstAttribute="trailing" secondItem="5nK-gX-Dpq" secondAttribute="trailing" id="R1g-k2-P0L"/>
+                                    <constraint firstItem="5nK-gX-Dpq" firstAttribute="top" secondItem="dsE-Ue-028" secondAttribute="top" id="Txc-mf-E82"/>
+                                    <constraint firstItem="0jd-zh-bhY" firstAttribute="leading" secondItem="dsE-Ue-028" secondAttribute="leading" constant="20" id="XoC-8c-ZwP"/>
+                                    <constraint firstAttribute="bottom" secondItem="0jd-zh-bhY" secondAttribute="bottom" constant="20" id="dH4-1J-H9J"/>
+                                    <constraint firstAttribute="trailing" secondItem="0jd-zh-bhY" secondAttribute="trailing" constant="20" id="g52-nS-fNc"/>
+                                    <constraint firstAttribute="bottom" secondItem="5nK-gX-Dpq" secondAttribute="bottom" id="n5h-Jo-ABf"/>
+                                    <constraint firstItem="5nK-gX-Dpq" firstAttribute="leading" secondItem="dsE-Ue-028" secondAttribute="leading" id="rJ1-Nh-NeY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dsE-Ue-028" firstAttribute="trailing" secondItem="iL4-Jf-xsA" secondAttribute="trailing" id="4KL-iC-KVh"/>
+                            <constraint firstItem="dsE-Ue-028" firstAttribute="leading" secondItem="iL4-Jf-xsA" secondAttribute="leading" id="4Wk-sk-stm"/>
+                            <constraint firstItem="dsE-Ue-028" firstAttribute="top" secondItem="iL4-Jf-xsA" secondAttribute="top" id="PaZ-xe-XsR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iL4-Jf-xsA"/>
+                    </view>
+                    <connections>
+                        <outlet property="nicknameLabel" destination="0jd-zh-bhY" id="fUj-J0-0cd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nn-ra-uYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3363.7681159420295" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pze-tw-xAU">
             <objects>
                 <navigationController storyboardIdentifier="TimeLine" automaticallyAdjustsScrollViewInsets="NO" id="B6P-Ak-YbQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2so-02-XVF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="2so-02-XVF">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -110,4 +181,7 @@
             <point key="canvasLocation" x="1505.7971014492755" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="unam_background" width="1200" height="525"/>
+    </resources>
 </document>

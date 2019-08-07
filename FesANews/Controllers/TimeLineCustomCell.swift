@@ -13,7 +13,7 @@ class TimeLineCustomCell: UITableViewCell {
   
   var institutionName: String?
   var nickname: String?
-  var date: Date?
+  var date: String?
   var content: String?
   
   var nameView: UILabel = {
@@ -56,39 +56,51 @@ class TimeLineCustomCell: UITableViewCell {
     if let institutionName = institutionName {
       nameView.text = institutionName
       nameView.textColor = UIColor.AppColor.mainBlue
+      nameView.font = UIFont(name: "Ubuntu-Bold", size: 18.0)
     }
     if let nickname = nickname {
       nicknameLabel.text = nickname
       nicknameLabel.textColor = UIColor.AppColor.nickNameGray
-      nicknameLabel.font = UIFont(name: "Arial", size: 8.0)
+      nicknameLabel.font = UIFont(name: "Ubuntu-Medium", size: 14.0)
     }
     if let dateL = date {
       dateLabel.text = dateL.description
+      dateLabel.textColor = UIColor.AppColor.nickNameGray
+      dateLabel.font = UIFont(name: "Ubuntu-Medium", size: 14.0)
     }
     if let content = content {
       contentTextView.text = content
+      contentTextView.font = UIFont(name: "Ubuntu-Regular", size: 15.0)
     }
   }
   
   private func setConstraints() {
-    self.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    self.heightAnchor.constraint(greaterThanOrEqualToConstant: 150.0).isActive = true
     
     nameView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0).isActive = true
-    nameView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-    nameView.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-    nameView.font = UIFont(name: "Ubuntu-Bold.ttf", size: 22.0)
+    nameView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0).isActive = true
+    nameView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10.0).isActive = true
+    nameView.textAlignment = .center
+    nameView.numberOfLines = 0
+    nameView.heightAnchor.constraint(greaterThanOrEqualToConstant: 25.0).isActive = true
     
     nicknameLabel.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 0.0).isActive = true
-    nicknameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+    nicknameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0).isActive = true
     nicknameLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+    nicknameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.3).isActive = true
     
-    dateLabel.topAnchor.constraint(equalTo: nicknameLabel.bottomAnchor, constant: 0.0).isActive = true
-    dateLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+    dateLabel.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 0.0).isActive = true
+    dateLabel.leadingAnchor.constraint(equalTo: nicknameLabel.trailingAnchor, constant: 0.0).isActive = true
+    dateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0).isActive = true
+    dateLabel.textAlignment = .right
     dateLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
     
     contentTextView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor).isActive = true
-    contentTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-    contentTextView.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
+    contentTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20.0).isActive = true
+    contentTextView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20.0).isActive = true
+    contentTextView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10.0).isActive = true
+    contentTextView.textAlignment = .justified
+    contentTextView.numberOfLines = 0
   }
   
   required init?(coder aDecoder: NSCoder) {
