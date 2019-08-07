@@ -35,6 +35,8 @@
 		FEA7C9E522F34CBB00132A23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA7C9E422F34CBB00132A23 /* GoogleService-Info.plist */; };
 		FEBC2D7822F686DA00C3716A /* TimeLineCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */; };
 		FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC2D7922F68F6A00C3716A /* DateService.swift */; };
+		FED3A9CE22FA765A00AF34F7 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED3A9CD22FA765A00AF34F7 /* PublishController.swift */; };
+		FED3A9D022FA778400AF34F7 /* AccountInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED3A9CF22FA778400AF34F7 /* AccountInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		FEA7C9E422F34CBB00132A23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineCustomCell.swift; sourceTree = "<group>"; };
 		FEBC2D7922F68F6A00C3716A /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		FED3A9CD22FA765A00AF34F7 /* PublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
+		FED3A9CF22FA778400AF34F7 /* AccountInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,8 @@
 				FEA5312C22F29DF7003FC49F /* TimeLineController.swift */,
 				FEBC2D7722F686DA00C3716A /* TimeLineCustomCell.swift */,
 				FE015C2222F92B080038674F /* InstitutionController.swift */,
+				FED3A9CD22FA765A00AF34F7 /* PublishController.swift */,
+				FED3A9CF22FA778400AF34F7 /* AccountInfoController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -505,12 +511,14 @@
 				FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */,
 				FE015C2A22F938360038674F /* InstitutionsProtocol.swift in Sources */,
 				FE599F6C22F52A3500A1C9E1 /* NewsModel.swift in Sources */,
+				FED3A9D022FA778400AF34F7 /* AccountInfoController.swift in Sources */,
 				FE4231E722F3613800F46F80 /* TimelineProtocol.swift in Sources */,
 				FE175B6422F2903F00E53245 /* ViewController.swift in Sources */,
 				FEA5312D22F29DF7003FC49F /* TimeLineController.swift in Sources */,
 				FE4231E422F35E5A00F46F80 /* NewsService.swift in Sources */,
 				FEBC2D7822F686DA00C3716A /* TimeLineCustomCell.swift in Sources */,
 				FE015C2C22F938580038674F /* InstitutionsService.swift in Sources */,
+				FED3A9CE22FA765A00AF34F7 /* PublishController.swift in Sources */,
 				FE6F3BF922F6A17300E17E36 /* UIColorExtension.swift in Sources */,
 				FE015C2822F935DF0038674F /* InstitutionsModel.swift in Sources */,
 				FE599F6922F5271C00A1C9E1 /* FirebaseService.swift in Sources */,

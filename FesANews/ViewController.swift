@@ -29,7 +29,7 @@ class ViewController: UIViewController {
   
   private func goToMainNavigationController() {
     let storyboard = UIStoryboard( name: "Main", bundle: nil )
-    let vc = storyboard.instantiateViewController(withIdentifier: "TimeLine")
+    let vc = storyboard.instantiateViewController(withIdentifier: "TabBar")
     present(vc, animated: true, completion: nil)
   }
 }

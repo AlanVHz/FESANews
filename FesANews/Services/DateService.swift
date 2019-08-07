@@ -25,4 +25,10 @@ class DateService {
     return userDateFormatter.string(from: auxDate)
   }
   
+  func dateFormatterForFirebase( date: Date ) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = dateFormat
+    return dateFormatter.string(from: date)
+  }
+  
 }

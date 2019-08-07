@@ -13,7 +13,7 @@ typealias institutionsList = [Institution]
 struct Institution: Codable {
   
   var name: String?
-  var id: String?
+  //var id: String?
   var nickname: String?
   
 }

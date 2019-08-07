@@ -1,10 +1,3 @@
-//
-//  TimeLineController.swift
-//  FesANews
-//
-//  Created by Alan Vargas on 31.07.2019.
-//  Copyright © 2019 Alan Vargas. All rights reserved.
-//
 
 import UIKit
 import Lottie
@@ -51,6 +44,7 @@ class TimeLineController: UIViewController {
   private func setNewsSnapshotListener() {
     self.newsService.getNews(success: { (newsList) in
       self.newsList = newsList
+      self.newsList?.reverse()
       self.toggleAnimation(play: false)
       self.tableView.reloadData()
     }) { (error) in
@@ -70,6 +64,7 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
         dateService.dateFormatterFromFirebase(
           date: news[indexPath.row].date ?? Date().description )
       cell.institutionName = news[indexPath.row].institutionName
+      cell.selectionStyle = .none
       cell.layoutSubviews() 
     }
     return cell
@@ -91,6 +86,7 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let institutionCtr = segue.destination as? InstitutionController else { return }
     institutionCtr.selectedNew = selectedNew
+    institutionCtr.newsList = newsList
   }
   
 }
