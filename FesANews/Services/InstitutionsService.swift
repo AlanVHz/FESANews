@@ -13,6 +13,10 @@ class InstitutionsService: InstitutionsProtocol {
   
   var institutions: institutionsList?
   
+  func getInstitutions() -> institutionsList {
+    return institutions ?? []
+  }
+  
   func getInstitutions(success: @escaping (institutionsList) -> Void, failure: @escaping (String) -> Void) {
     Fire.shared.database.collection("institutions").addSnapshotListener { (query, error) in
       if let err = error { failure( err.localizedDescription ) }

@@ -9,8 +9,8 @@ class PublishController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var publishButton: UIButton!
   
   let userDefaults = UserDefaults.standard
-  let newsService = NewsService()
-  let dateService = DateService()
+  var newsService: NewsService?
+  var dateService: DateService?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,6 +31,7 @@ class PublishController: UIViewController, UITextFieldDelegate {
   }
   
   private func setup() {
+    setupDependencies()
     if !getStatusOfAccount() {
       showModal()
       setRightNavigationButton( hasAccount: false )
@@ -38,6 +39,11 @@ class PublishController: UIViewController, UITextFieldDelegate {
       setRightNavigationButton( hasAccount: true )
     }
     setupUi()
+  }
+  
+  private func setupDependencies() {
+    newsService = BasicService.shared.newsService
+    dateService = BasicService.shared.dateService
   }
   
   private func setRightNavigationButton( hasAccount: Bool ) {
@@ -49,11 +55,21 @@ class PublishController: UIViewController, UITextFieldDelegate {
   }
   
   @objc func goToMyAccount() {
-    
+    performSegue(withIdentifier: "institutionSegue2", sender: self)
   }
   
   @objc func addAccount() {
     showModal()
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let controller = segue.destination as? InstitutionController {
+      controller.newsList = newsService?.getNewsListFromRam()
+      var newModel = NewModel()
+      newModel.nickname = userDefaults.string(forKey: "nickname")
+      newModel.institutionName = userDefaults.string(forKey: "institutionName")
+      controller.selectedNew = newModel
+    }
   }
   
   private func setupUi () {
@@ -69,7 +85,7 @@ class PublishController: UIViewController, UITextFieldDelegate {
   
   @objc func publishAction() {
     if let institution = userDefaults.string(forKey: "institutionName") {
-      let date = dateService.dateFormatterForFirebase(date: Date())
+      let date = dateService!.dateFormatterForFirebase(date: Date())
       publishRequest(institution: institution,
                      nickname: userDefaults.string(forKey: "nickname") ?? "",
                      date: date,
@@ -80,7 +96,7 @@ class PublishController: UIViewController, UITextFieldDelegate {
   }
   
   private func publishRequest( institution:String, nickname: String, date: String, content:String ) {
-    newsService.publishNew(institution: institution, nickname: nickname, date: date, content: content, success: {
+    newsService!.publishNew(institution: institution, nickname: nickname, date: date, content: content, success: {
       self.presentAlert( title: "Completado", message: "¡Noticia publicada con éxito!")
     }) { (error) in
       self.presentAlert( title: "Error", message: "Ocurrió un error, asegurate de estar conectado a una red")

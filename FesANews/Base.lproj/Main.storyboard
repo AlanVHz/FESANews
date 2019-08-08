@@ -16,6 +16,9 @@
         <array key="Ubuntu-Medium.ttf">
             <string>Ubuntu-Medium</string>
         </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -103,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tb-25-eUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="138"/>
+            <point key="canvasLocation" x="3606" y="-601"/>
         </scene>
         <!--Institution Controller-->
         <scene sceneID="pYH-VX-Jow">
@@ -119,7 +122,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unam_background" translatesAutoresizingMaskIntoConstraints="NO" id="5nK-gX-Dpq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-zh-bhY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-zh-bhY">
                                         <rect key="frame" x="20" y="130" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="77U-GJ-aaR"/>
@@ -159,6 +162,30 @@
                                     <outlet property="delegate" destination="j9k-6i-if9" id="NMu-C2-vRG"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PY6-Wc-neg">
+                                <rect key="frame" x="0.0" y="340" width="414" height="473"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aragon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="9AP-Ge-1EZ">
+                                        <rect key="frame" x="103.5" y="189" width="207" height="189.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay noticias recientes de este departamento, regresa más tarde" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk3-dX-T2O">
+                                        <rect key="frame" x="30" y="50" width="354" height="49.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                        <color key="textColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Gk3-dX-T2O" firstAttribute="leading" secondItem="PY6-Wc-neg" secondAttribute="leading" constant="30" id="5kT-mL-TZW"/>
+                                    <constraint firstItem="Gk3-dX-T2O" firstAttribute="top" secondItem="PY6-Wc-neg" secondAttribute="top" constant="50" id="Bef-iy-iZr"/>
+                                    <constraint firstItem="9AP-Ge-1EZ" firstAttribute="height" secondItem="PY6-Wc-neg" secondAttribute="height" multiplier="0.4" id="M73-E7-SZ6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gk3-dX-T2O" secondAttribute="trailing" constant="30" id="iZM-mB-c0M"/>
+                                    <constraint firstItem="9AP-Ge-1EZ" firstAttribute="centerX" secondItem="PY6-Wc-neg" secondAttribute="centerX" id="rFF-bh-ayp"/>
+                                    <constraint firstItem="9AP-Ge-1EZ" firstAttribute="width" secondItem="PY6-Wc-neg" secondAttribute="width" multiplier="0.5" id="tia-Kh-Luj"/>
+                                    <constraint firstItem="9AP-Ge-1EZ" firstAttribute="centerY" secondItem="PY6-Wc-neg" secondAttribute="centerY" multiplier="1.2" id="xn3-Jl-y5u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,18 +195,89 @@
                             <constraint firstItem="KyC-tc-4Ac" firstAttribute="trailing" secondItem="iL4-Jf-xsA" secondAttribute="trailing" id="Ast-cD-7sf"/>
                             <constraint firstAttribute="bottom" secondItem="KyC-tc-4Ac" secondAttribute="bottom" id="LxC-6y-MRh"/>
                             <constraint firstItem="dsE-Ue-028" firstAttribute="top" secondItem="iL4-Jf-xsA" secondAttribute="top" id="PaZ-xe-XsR"/>
+                            <constraint firstItem="PY6-Wc-neg" firstAttribute="trailing" secondItem="iL4-Jf-xsA" secondAttribute="trailing" id="WvF-xw-m7x"/>
                             <constraint firstItem="KyC-tc-4Ac" firstAttribute="leading" secondItem="iL4-Jf-xsA" secondAttribute="leading" id="fid-ba-Yp7"/>
+                            <constraint firstItem="PY6-Wc-neg" firstAttribute="top" secondItem="dsE-Ue-028" secondAttribute="bottom" id="nB1-Ht-nYE"/>
+                            <constraint firstItem="PY6-Wc-neg" firstAttribute="bottom" secondItem="iL4-Jf-xsA" secondAttribute="bottom" id="pWv-bf-eqz"/>
+                            <constraint firstItem="PY6-Wc-neg" firstAttribute="leading" secondItem="iL4-Jf-xsA" secondAttribute="leading" id="qei-8G-6Ge"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iL4-Jf-xsA"/>
                     </view>
                     <connections>
+                        <outlet property="emptyState" destination="PY6-Wc-neg" id="N1R-It-SpQ"/>
                         <outlet property="institutionTableView" destination="KyC-tc-4Ac" id="yX6-sR-012"/>
                         <outlet property="nicknameLabel" destination="0jd-zh-bhY" id="fUj-J0-0cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Nn-ra-uYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4555" y="138"/>
+            <point key="canvasLocation" x="5012" y="138"/>
+        </scene>
+        <!--Welcome Controller-->
+        <scene sceneID="VhH-uE-taK">
+            <objects>
+                <viewController storyboardIdentifier="welcome" id="oqc-lS-6lc" customClass="WelcomeController" customModule="FesANews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H87-QN-Yts">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aragon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Lvv-dN-eEa">
+                                <rect key="frame" x="83" y="313.5" width="248" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Bienvenido a FESANews!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OU-XO-Aiq">
+                                <rect key="frame" x="30" y="143.5" width="354" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="20"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-Om-fAw">
+                                <rect key="frame" x="34" y="206" width="350" height="57.5"/>
+                                <string key="text">Con esta aplicación podrás enterarte de todo lo que ocurre en nuestra facultad. 
+¡Se terminó la desinformación!</string>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Piu-Yb-DxH">
+                                <rect key="frame" x="83" y="622.5" width="248" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="muy-Ct-IGV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu Medium" pointSize="15"/>
+                                <state key="normal" title="Aceptar">
+                                    <color key="titleColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonAction:" destination="oqc-lS-6lc" eventType="touchUpInside" id="1dw-qY-yY3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gi8-Om-fAw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H87-QN-Yts" secondAttribute="leading" constant="30" id="1Ls-S6-505"/>
+                            <constraint firstItem="Piu-Yb-DxH" firstAttribute="top" secondItem="Lvv-dN-eEa" secondAttribute="bottom" constant="40" id="2XY-Gf-Udc"/>
+                            <constraint firstItem="Piu-Yb-DxH" firstAttribute="centerX" secondItem="H87-QN-Yts" secondAttribute="centerX" id="BDI-FZ-WkG"/>
+                            <constraint firstItem="Lvv-dN-eEa" firstAttribute="top" secondItem="gi8-Om-fAw" secondAttribute="bottom" constant="50" id="Q56-Qg-OzQ"/>
+                            <constraint firstItem="Lvv-dN-eEa" firstAttribute="centerY" secondItem="H87-QN-Yts" secondAttribute="centerY" id="SAX-UH-cVr"/>
+                            <constraint firstItem="gi8-Om-fAw" firstAttribute="top" secondItem="0OU-XO-Aiq" secondAttribute="bottom" constant="40" id="WoI-cV-1rt"/>
+                            <constraint firstItem="Lvv-dN-eEa" firstAttribute="width" secondItem="H87-QN-Yts" secondAttribute="width" multiplier="0.6" id="kfL-sg-s34"/>
+                            <constraint firstItem="Lvv-dN-eEa" firstAttribute="height" secondItem="H87-QN-Yts" secondAttribute="height" multiplier="0.3" id="m5v-9e-BLo"/>
+                            <constraint firstItem="Piu-Yb-DxH" firstAttribute="width" secondItem="H87-QN-Yts" secondAttribute="width" multiplier="0.6" id="mbw-40-XUf"/>
+                            <constraint firstItem="KHV-Jr-KTE" firstAttribute="trailing" secondItem="0OU-XO-Aiq" secondAttribute="trailing" constant="30" id="mpk-k4-ZFy"/>
+                            <constraint firstItem="Lvv-dN-eEa" firstAttribute="centerX" secondItem="H87-QN-Yts" secondAttribute="centerX" id="n7d-0v-weG"/>
+                            <constraint firstItem="0OU-XO-Aiq" firstAttribute="leading" secondItem="KHV-Jr-KTE" secondAttribute="leading" constant="30" id="t6B-ze-l8H"/>
+                            <constraint firstAttribute="trailing" secondItem="gi8-Om-fAw" secondAttribute="trailing" constant="30" id="xr0-hE-rCe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KHV-Jr-KTE"/>
+                    </view>
+                    <connections>
+                        <outlet property="okButton" destination="Piu-Yb-DxH" id="EUs-ui-PyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfs-Zg-Hqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="-618"/>
         </scene>
         <!--Noticias-->
         <scene sceneID="Pze-tw-xAU">
@@ -206,7 +304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhJ-C6-9t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="138"/>
+            <point key="canvasLocation" x="2645" y="-601"/>
         </scene>
         <!--Account Info Controller-->
         <scene sceneID="pqv-vl-9Xj">
@@ -315,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STP-LM-sq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676.8115942028987" y="934.82142857142856"/>
+            <point key="canvasLocation" x="1557" y="935"/>
         </scene>
         <!--Publicador-->
         <scene sceneID="pgR-6F-l8r">
@@ -345,13 +443,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Hola!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpX-8b-Irp">
-                                <rect key="frame" x="20" y="215" width="374" height="25"/>
+                                <rect key="frame" x="20" y="212.5" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
                                 <color key="textColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWl-0t-ci5">
-                                <rect key="frame" x="20" y="270" width="374" height="38.5"/>
+                                <rect key="frame" x="20" y="268.5" width="374" height="40"/>
                                 <attributedString key="attributedText">
                                     <fragment content="¡Publica tu noticia aquí!, los universitarios lo agradecerán">
                                         <attributes>
@@ -405,11 +503,12 @@
                         <outlet property="contentView" destination="poE-ov-NoB" id="Ptj-fR-gba"/>
                         <outlet property="nameLabel" destination="cpX-8b-Irp" id="hQt-EZ-O4q"/>
                         <outlet property="publishButton" destination="3Cc-RQ-7RO" id="LPc-KH-iqx"/>
+                        <segue destination="j9k-6i-if9" kind="show" identifier="institutionSegue2" id="PT1-p0-FVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0k-6E-Wqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3605.7971014492755" y="934.82142857142856"/>
+            <point key="canvasLocation" x="3606" y="138"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cFm-9n-6Ty">
@@ -425,6 +524,7 @@
                     <connections>
                         <segue destination="B6P-Ak-YbQ" kind="relationship" relationship="viewControllers" id="mF3-bG-5KX"/>
                         <segue destination="eqK-Ba-YBw" kind="relationship" relationship="viewControllers" id="Rbd-M7-unq"/>
+                        <segue destination="TLn-jX-cQr" kind="relationship" relationship="viewControllers" id="ZP8-kt-bPo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsr-bd-27y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -456,13 +556,90 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dl3-bn-ylw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2695.6521739130435" y="934.82142857142856"/>
+            <point key="canvasLocation" x="2645" y="138"/>
+        </scene>
+        <!--Instituciones-->
+        <scene sceneID="B6f-tQ-9RY">
+            <objects>
+                <tableViewController id="OHt-hW-K8J" customClass="InstitutionsTableViewController" customModule="FesANews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j69-dh-B9x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="institutionCell" textLabel="xvJ-d6-PI6" detailTextLabel="L4x-ON-nkX" style="IBUITableViewCellStyleSubtitle" id="xzv-Ey-buU">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzv-Ey-buU" id="U8F-L2-ro1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvJ-d6-PI6">
+                                            <rect key="frame" x="20" y="0.0" width="49.5" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                            <color key="textColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L4x-ON-nkX">
+                                            <rect key="frame" x="20" y="25" width="61" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                            <color key="textColor" red="0.36470588240000001" green="0.40784313729999999" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OHt-hW-K8J" id="vX7-qG-8Ti"/>
+                            <outlet property="delegate" destination="OHt-hW-K8J" id="wTS-yG-PBX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Instituciones" id="fVN-4N-afB"/>
+                    <connections>
+                        <segue destination="j9k-6i-if9" kind="show" identifier="institutionSegue3" id="v2M-z4-f3T"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8L-qu-KOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3555.072463768116" y="934.82142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VlS-Sa-LV5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TLn-jX-cQr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="hEC-7x-i7O"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RZB-EG-Unv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.10980392160000001" green="0.23921568630000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OHt-hW-K8J" kind="relationship" relationship="rootViewController" id="vn5-fZ-lYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNp-KR-c7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645" y="935"/>
         </scene>
     </scenes>
     <resources>
+        <image name="aragon-logo" width="1876" height="2041"/>
         <image name="newsItem" width="30" height="30"/>
         <image name="thinking" width="1024" height="1024"/>
         <image name="unam_background" width="1200" height="525"/>
         <image name="write" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v2M-z4-f3T"/>
+    </inferredMetricsTieBreakers>
 </document>

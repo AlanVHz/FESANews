@@ -18,6 +18,9 @@
 		FE015C2822F935DF0038674F /* InstitutionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2722F935DF0038674F /* InstitutionsModel.swift */; };
 		FE015C2A22F938360038674F /* InstitutionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2922F938360038674F /* InstitutionsProtocol.swift */; };
 		FE015C2C22F938580038674F /* InstitutionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE015C2B22F938580038674F /* InstitutionsService.swift */; };
+		FE0973CF22FBBC2F002D31A4 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0973CE22FBBC2F002D31A4 /* WelcomeController.swift */; };
+		FE0973D322FBC7AB002D31A4 /* BasicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0973D222FBC7AB002D31A4 /* BasicService.swift */; };
+		FE0973D522FBD253002D31A4 /* InstitutionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0973D422FBD253002D31A4 /* InstitutionsTableViewController.swift */; };
 		FE175B6222F2903F00E53245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B6122F2903F00E53245 /* AppDelegate.swift */; };
 		FE175B6422F2903F00E53245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE175B6322F2903F00E53245 /* ViewController.swift */; };
 		FE175B6722F2903F00E53245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE175B6522F2903F00E53245 /* Main.storyboard */; };
@@ -71,6 +74,9 @@
 		FE015C2722F935DF0038674F /* InstitutionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsModel.swift; sourceTree = "<group>"; };
 		FE015C2922F938360038674F /* InstitutionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsProtocol.swift; sourceTree = "<group>"; };
 		FE015C2B22F938580038674F /* InstitutionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsService.swift; sourceTree = "<group>"; };
+		FE0973CE22FBBC2F002D31A4 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		FE0973D222FBC7AB002D31A4 /* BasicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicService.swift; sourceTree = "<group>"; };
+		FE0973D422FBD253002D31A4 /* InstitutionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionsTableViewController.swift; sourceTree = "<group>"; };
 		FE175B5E22F2903F00E53245 /* FesANews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FesANews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE175B6122F2903F00E53245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE175B6322F2903F00E53245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 				FE015C2B22F938580038674F /* InstitutionsService.swift */,
 				FE599F6822F5271C00A1C9E1 /* FirebaseService.swift */,
 				FEBC2D7922F68F6A00C3716A /* DateService.swift */,
+				FE0973D222FBC7AB002D31A4 /* BasicService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,6 +284,8 @@
 				FE015C2222F92B080038674F /* InstitutionController.swift */,
 				FED3A9CD22FA765A00AF34F7 /* PublishController.swift */,
 				FED3A9CF22FA778400AF34F7 /* AccountInfoController.swift */,
+				FE0973CE22FBBC2F002D31A4 /* WelcomeController.swift */,
+				FE0973D422FBD253002D31A4 /* InstitutionsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,9 +517,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0973D522FBD253002D31A4 /* InstitutionsTableViewController.swift in Sources */,
 				FEBC2D7A22F68F6A00C3716A /* DateService.swift in Sources */,
 				FE015C2A22F938360038674F /* InstitutionsProtocol.swift in Sources */,
 				FE599F6C22F52A3500A1C9E1 /* NewsModel.swift in Sources */,
+				FE0973CF22FBBC2F002D31A4 /* WelcomeController.swift in Sources */,
 				FED3A9D022FA778400AF34F7 /* AccountInfoController.swift in Sources */,
 				FE4231E722F3613800F46F80 /* TimelineProtocol.swift in Sources */,
 				FE175B6422F2903F00E53245 /* ViewController.swift in Sources */,
@@ -523,6 +534,7 @@
 				FE015C2822F935DF0038674F /* InstitutionsModel.swift in Sources */,
 				FE599F6922F5271C00A1C9E1 /* FirebaseService.swift in Sources */,
 				FE175B6222F2903F00E53245 /* AppDelegate.swift in Sources */,
+				FE0973D322FBC7AB002D31A4 /* BasicService.swift in Sources */,
 				FE015C2322F92B080038674F /* InstitutionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

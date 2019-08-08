@@ -9,13 +9,14 @@ class TimeLineController: UIViewController {
   
   var newsList: [NewModel]?
   var selectedNew: NewModel?
-  var newsService = NewsService()
-  var dateService = DateService()
+  let userDefaults = UserDefaults()
+  var newsService: NewsService?
+  var dateService: DateService?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    setNewsSnapshotListener()
     setup()
+    setNewsSnapshotListener()
     self.tableView.register( TimeLineCustomCell.self, forCellReuseIdentifier: "TimelineCell")
   }
   
@@ -26,8 +27,26 @@ class TimeLineController: UIViewController {
   private func setup() {
 
     setupUi()
+    setupDependencies()
     setAnimation()
     toggleAnimation(play: true)
+    showWelcomeScreen()
+    
+  }
+  
+  private func setupDependencies() {
+    newsService = BasicService.shared.newsService
+    dateService = BasicService.shared.dateService
+  }
+  
+  private func showWelcomeScreen() {
+    let show = userDefaults.string(forKey: "showWelcome")
+    
+    if show == nil {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let vc = storyboard.instantiateViewController(withIdentifier: "welcome")
+      present(vc, animated: true, completion: nil)
+    }
   }
   
   func toggleAnimation( play: Bool ) {
@@ -42,7 +61,7 @@ class TimeLineController: UIViewController {
   }
   
   private func setNewsSnapshotListener() {
-    self.newsService.getNews(success: { (newsList) in
+    self.newsService!.getNews(success: { (newsList) in
       self.newsList = newsList
       self.newsList?.reverse()
       self.toggleAnimation(play: false)
@@ -61,7 +80,7 @@ extension TimeLineController: UITableViewDelegate, UITableViewDataSource {
       cell.content = news[indexPath.row].content
       cell.nickname = news[indexPath.row].nickname
       cell.date =
-        dateService.dateFormatterFromFirebase(
+        dateService!.dateFormatterFromFirebase(
           date: news[indexPath.row].date ?? Date().description )
       cell.institutionName = news[indexPath.row].institutionName
       cell.selectionStyle = .none
